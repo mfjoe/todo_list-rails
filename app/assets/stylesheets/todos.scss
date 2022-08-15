@@ -1,3 +1,71 @@
 // Place all the styles related to the todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root {
+  font-family: "Roboto";
+}
+
+.container {
+  background-image: linear-gradient(#D52E32, #ebb8c3);
+  width: 50%;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: antiquewhite;
+  background-image: linear-gradient(#D52E32, #ebb8c3);
+  height: 80px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.todo_delete a:link {
+  font-size: 15px;
+  color: #D52E32;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.todos a:link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  color: #D52E32;
+}
+
+a:link, a:visited {
+  color: #D52E32;
+}
+.todo {
+  height: 112px;
+  width: 854px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  border: 2px solid lightcoral;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.fa-solid fa-trash {
+  color: #D52E32;
+}

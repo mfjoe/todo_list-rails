@@ -1,10 +1,22 @@
-<h1> Index Page! </h1>
-<% @todos.each do |todo| %>
-    <li>
-      <%= link_to todo.title, todo_path(todo.id) %>
-      <%= link_to "edit", edit_todo_path(todo[:id]) %>
-      <%= link_to "delete", todo, method: :delete, data: { confirm: "You sure?" }%>
-    </li>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div class="header">
+        <h1> Todo List! </h1>
+      </div>
 
-<%= link_to "Create New Todo", new_todo_path%>
+      <div class="todos">
+      <% @todos.each do |todo| %>
+        <div class="todo">
+          <p><%= link_to todo.title, todo_path(todo.id) %></p>
+          <div class="todo_delete">
+            <%= link_to todo_path(todo), method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
